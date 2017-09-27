@@ -1,4 +1,4 @@
-#N canvas 377 205 1700 1062 12;
+#N canvas 1025 142 1700 1062 12;
 #X obj 379 557 dac~;
 #X obj 103 454 catch~ master;
 #N canvas 794 22 1663 978 techno-world 0;
@@ -696,6 +696,13 @@
 #X obj 1006 371 *~ 500;
 #X obj 1007 396 +~ 150;
 #X text 1018 315 pitch shift drums;
+#X obj 246 520 dubdel;
+#X obj 608 339 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X obj 594 510 list prepend dry;
+#X msg 182 655 dry 1 \, bq 2 \, basedur 500 \, bpitch 83 \, feedback
+0.99 \, dell 2 \, delr 3 \,;
+#X obj 180 618 loadbang;
 #X connect 1 0 33 0;
 #X connect 3 0 7 0;
 #X connect 4 0 11 1;
@@ -724,8 +731,8 @@
 #X connect 25 0 30 0;
 #X connect 26 0 32 0;
 #X connect 27 0 31 0;
-#X connect 33 0 0 0;
-#X connect 33 0 0 1;
+#X connect 33 0 77 0;
+#X connect 33 0 77 1;
 #X connect 34 0 3 0;
 #X connect 34 0 35 0;
 #X connect 34 0 68 0;
@@ -775,3 +782,9 @@
 #X connect 73 0 74 0;
 #X connect 74 0 75 0;
 #X connect 75 0 72 0;
+#X connect 77 0 0 0;
+#X connect 77 1 0 1;
+#X connect 78 0 79 0;
+#X connect 79 0 77 2;
+#X connect 80 0 77 2;
+#X connect 81 0 80 0;
