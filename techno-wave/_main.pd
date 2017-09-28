@@ -22,7 +22,7 @@
 #X text 773 322 pitch shift drums;
 #X obj 518 72 sig~;
 #X obj 461 23 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 10160 1;
 #X floatatom 462 168 5 0 0 0 - - -, f 5;
 #X obj 406 365 change;
 #X obj 427 390 s presence;
@@ -90,6 +90,8 @@
 #X msg 442 488 1 3000;
 #X msg 799 474 85 60000;
 #X text 525 34 change to fader for testing!;
+#X msg 357 69 0.8;
+#X obj 357 44 loadbang;
 #X connect 1 0 26 0;
 #X connect 1 0 27 0;
 #X connect 2 0 5 0;
@@ -161,3 +163,5 @@
 #X connect 66 0 6 0;
 #X connect 67 0 53 0;
 #X connect 68 0 63 0;
+#X connect 70 0 22 0;
+#X connect 71 0 70 0;
